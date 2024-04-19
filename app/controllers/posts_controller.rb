@@ -19,6 +19,10 @@ class PostsController < ApplicationController
   def edit
   end
 
+  def myposts
+    @posts = Post.all
+  end
+
   # POST /posts or /posts.json
   def create
     @post = Post.new(post_params)
