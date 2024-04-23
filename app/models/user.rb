@@ -4,8 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-         has_many :post
-
+        has_many :post
+        has_many :comments
+        
          before_create :randomize_id
          private
          def randomize_id
