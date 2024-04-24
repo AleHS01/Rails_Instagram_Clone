@@ -4,7 +4,19 @@
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
-
+      
+      <div class="field">
+        <%= f.label :username %><br />
+        <%= f.text_field :username, class:"form-control" %>
+      </div>
+      <div class="field">
+        <%= f.label :bio %><br />
+        <%= f.text_field :bio, class:"form-control" %>
+      </div>
+      <div class="field">
+        <%= f.label "Profile Picture" %><br />
+        <%= f.file_field :avatar,class:"form-control" %>
+      </div>
       <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
