@@ -19,3 +19,8 @@
 .post-link:hover {
   opacity: 0.3;
 }
+
+.btn-unlike,
+.btn-like {
+  z-index: 2;
+}

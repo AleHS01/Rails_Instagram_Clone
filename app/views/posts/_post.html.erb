@@ -18,11 +18,20 @@
   <p>
     <%= link_to "", post, class:"post-link" %>
   </p>
+  <%if user_signed_in?%>
+    <%like = current_user.likes.find_by(post: post)%>
+      <%if like.nil?%>
+      <%= button_to "like", likes_path, params: {like: {post_id: post.id}}, method: :post,  class: "btn-like" %>
+    <%else%>
+      <%= button_to "Unlike", like_path(like), method: :delete , class: "btn-unlike"%>
+    <%end%>
+  <%end%>
+  <p><%= post.likes.count%> Likes</p>
  
   <% post.images.each do |image| %>
     <%= image_tag(image, style: "object-fit:cover; width: 200px; height: 600px") %>
   <%end%>
 </div>
  <p>
-    <%#= link_to post.user.email, post.user%>
+    <%= link_to post.user.email, post.user%>
   </p>
