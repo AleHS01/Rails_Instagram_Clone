@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'profiles/index'
   resources :comments
   resources :likes , only: [:create, :destroy]
   devise_scope :user do

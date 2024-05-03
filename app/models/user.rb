@@ -15,6 +15,10 @@ class User < ApplicationRecord
         def unfollow(user)
           followerable_relationships.where(followed_id: user.id).destroy_all
         end
+        
+        def self.ransackable_attributes(auth_object = nil)
+          ["username"]
+        end
 
          private
          def randomize_id
