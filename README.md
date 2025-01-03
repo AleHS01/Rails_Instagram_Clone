@@ -1,6 +1,6 @@
 # Ruby Instagram Clone
 
-This is an Instagram like app. Made the purpose of learning Ruby on Rails with a hands-on Project.
+This is an Instagram like app (functionality only). Made the purpose of learning Ruby on Rails with a hands-on Project.
 
 ## Tech Stack
 ![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white)
